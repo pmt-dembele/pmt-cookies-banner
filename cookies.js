@@ -413,7 +413,7 @@ const html = `
         <h2 class="banner-title">Ce site utilise des cookies</h2>
       </div>
       <p class="banner-text">
-        Nous utilisons des cookies pour assurer le bon fonctionnement du site, mesurer l'audience et personnaliser votre expérience.
+        Nous utilisons des cookies pour assurer le bon fonctionnement du site, mesurer l'audience et personnaliser votre expérience. Les cookies non essentiels ne seront déposés qu'avec votre consentement, conformément aux exigences de l'ARTCI en matière de protection des données à caractère personnel.
       </p>
       <div class="banner-links">
         <a onclick="openPolitique()">Politique de cookies</a>
@@ -553,7 +553,7 @@ const html = `
 <div id="toast"></div>
 
 <!-- BOUTON RETRAIT CONSENTEMENT -->
-<button id="revoke-btn" onclick="revokeConsent()" title="Modifier mes préférences cookies">
+<button id="revoke-btn" onclick="openSettings()" title="Modifier mes préférences cookies">
   🍪 Gérer mes cookies
 </button>
 `;
