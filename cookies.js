@@ -574,10 +574,12 @@ const html = `
     <p>
       Nous vous remercions d'utiliser notre site web et nos services. Nous sommes PAYMETRUST, une Société par Actions Simplifiées de Droit Ivoirien, au capital d’un million (1.000.000) de Francs CFA, immatriculée au Registre du Commerce et du Crédit Mobilier d’Abidjan sous le numéro CI-ABJ-03-2022-B16-00086. Notre compte contribuable est le N°2242638H, et notre siège social est situé en Côte d’Ivoire, Abidjan, Cocody Angré 8ème tranche. Vous pouvez nous joindre à l'adresse e-mail contact@paymetrust.net ou visiter notre site web http://www.paymetrust.net
     </p>
+    
     <h3>Informations supplémentaires</h3>
     <p>
       La présente politique de confidentialité explique comment vos informations personnelles sont collectées, pourquoi nous les collectons et ce que nous en faisons.
     </p>
+    
     <h3>Principes Directeurs</h3>
     <p>
       Le principe de responsabilité En tant qu’entreprise offrant des prestations financières, nous respectons les réglementations en vigueur et les exigences relatives à la protection des données personnelles.
@@ -587,6 +589,7 @@ const html = `
       <li>Nos pratiques en matière de respect de la vie privée.</li>
       <li>Vos options concernant l’utilisation de notre site web, de nos plateformes de paiement (« Plateformes »), de nos applications (« Applications »), de nos notifications par e-mail et de nos outils.</li>
     </ul>
+    
     <p>
       Nous décrivons ci-dessous :
     </p>
