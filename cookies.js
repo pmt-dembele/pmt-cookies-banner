@@ -417,7 +417,7 @@ const html = `
       </p>
       <div class="banner-links">
         <a onclick="openPolitique()">Politique de cookies</a>
-        <a onclick="openPolitique()">Politique de confidentialité</a>
+        <a onclick="openPolitiqueConfidentialite()">Politique de confidentialité</a>
       </div>
     </div>
 
@@ -549,6 +549,81 @@ const html = `
   </div>
 </div>
 
+<!-- POLITIQUE DE CONFIDENTIALITE MODAL -->
+<div id="politique-confidentialite-modal" role="dialog" aria-label="Politique de confidentialité">
+  <div class="ck-pol-box">
+    <h2>Politique de confidentialité de PAYMETRUST</h2>
+    <h3>Présentation</h3>
+    <p>
+      Nous vous remercions d'utiliser notre site web et nos services. Nous sommes PAYMETRUST, une Société par Actions Simplifiées de Droit Ivoirien, au capital d’un million (1.000.000) de Francs CFA, immatriculée au Registre du Commerce et du Crédit Mobilier d’Abidjan sous le numéro CI-ABJ-03-2022-B16-00086. Notre compte contribuable est le N°2242638H, et notre siège social est situé en Côte d’Ivoire, Abidjan, Cocody Angré 8ème tranche. Vous pouvez nous joindre à l'adresse e-mail contact@paymetrust.net ou visiter notre site web http://www.paymetrust.net
+    </p>
+    <h3>Informations supplémentaires</h3>
+    <p>
+      La présente politique de confidentialité explique comment vos informations personnelles sont collectées, pourquoi nous les collectons et ce que nous en faisons.
+    </p>
+    <h3>Principes Directeurs</h3>
+    <p>
+      Le principe de responsabilité En tant qu’entreprise offrant des prestations financières, nous respectons les réglementations en vigueur et les exigences relatives à la protection des données personnelles.
+      Cette politique de confidentialité vous informe sur :
+    </p>
+    <ul>
+      <li>Nos pratiques en matière de respect de la vie privée.</li>
+      <li>Vos options concernant l’utilisation de notre site web, de nos plateformes de paiement (« Plateformes »), de nos applications (« Applications »), de nos notifications par e-mail et de nos outils.</li>
+    </ul>
+    <p>
+      Nous décrivons ci-dessous :
+    </p>
+    <ul>
+      <li>Les types d’informations personnelles que nous collectons.</li>
+      <li>Les objectifs de leur collecte.</li>
+      <li>Les mesures de sécurité prises pour protéger vos données.</li>
+    </ul>
+
+    <h3>Principes Appliqués</h3>
+    <ul>
+      <li><strong>Responsabilité :</strong> Vous êtes responsable de vos informations personnelles et de vos choix.</li>
+      <li><strong>Sécurité des données :</strong> Nous prenons toutes les mesures nécessaires pour protéger vos données personnelles.</li>
+      <li><strong>Transparence :</strong> Nous expliquons comment nous collectons, utilisons et protégeons vos données.</li>
+      <li><strong>Respect des lois locales :</strong> Nos pratiques varient selon les pays, pour respecter les règles locales.</li>
+      <li><strong>Consentement :</strong> Nous collectons vos données avec votre accord.</li>
+      <li><strong>Finalité et pertinence :</strong> Nous collectons uniquement les données nécessaires pour fournir nos services.</li>
+      <li><strong>Exactitude et confidentialité :</strong> Nous veillons à l’exactitude et à la confidentialité de vos données.</li>
+    </ul>
+
+    <h3>Informations Collectées</h3>
+    <p>Nous pouvons collecter :</p>
+    <ul>
+      <li>Données d’identité : Nom, numéro d’identité, date de naissance.</li>
+      <li>Données de contact : Adresse, e-mail, numéro de téléphone.</li>
+      <li>Documents d’identification : Passeport, carte d’identité.</li>
+
+      <li>Données techniques : Adresse IP, identifiant unique de l’appareil.</li>
+      <li>Données financières : Numéro de compte, transactions.</li>
+      <li>Données marketing : Historique d’abonnements ou préférences de communication.</li>
+    </ul>
+
+
+    <h3>Utilisation des Informations</h3> 
+    <p>Nous utilisons vos données pour :</p>
+    <ul>
+      <li>Créer et gérer votre compte.</li>
+      <li>Vérifier votre identité.</li>
+      <li>Traiter vos transactions.</li>
+      <li>Répondre à vos demandes.</li>
+      <li>Proposer des produits et services adaptés.</li>
+      <li>Respecter les lois, notamment celles contre le blanchiment d’argent.</li>
+    </ul>
+
+    <h3>Contact</h3>
+    <p>
+      Pour toute question ou préoccupation, veuillez nous contacter :
+      E-mail: contact@paymetrust.net
+    </p>
+
+    <button class="pclose-btn" onclick="closePolitiqueConfidentialite()">Fermer</button>
+  </div>
+</div>
+
 <!-- TOAST -->
 <div id="toast"></div>
 
@@ -665,6 +740,9 @@ document.body.insertAdjacentHTML("beforeend", html);
   function openPolitique() { document.getElementById('politique-modal').classList.add('open'); }
   function closePolitique() { document.getElementById('politique-modal').classList.remove('open'); }
 
+  function openPolitiqueConfidentialite() { document.getElementById('politique-confidentialite-modal').classList.add('open'); }
+  function closePolitiqueConfidentialite() { document.getElementById('politique-confidentialite-modal').classList.remove('open'); }
+
   // Expose handlers globally for inline onclick attributes
   window.acceptAll = acceptAll;
   window.refuseAll = refuseAll;
@@ -675,12 +753,19 @@ document.body.insertAdjacentHTML("beforeend", html);
   window.openPolitique = openPolitique;
   window.closePolitique = closePolitique;
 
+  window.openPolitiqueConfidentialite = openPolitiqueConfidentialite;
+  window.closePolitiqueConfidentialite = closePolitiqueConfidentialite;
+
   // Close modals on backdrop click
   document.getElementById('cookie-modal').addEventListener('click', e => {
     if (e.target === document.getElementById('cookie-modal')) closeSettings();
   });
   document.getElementById('politique-modal').addEventListener('click', e => {
     if (e.target === document.getElementById('politique-modal')) closePolitique();
+  });
+
+  document.getElementById('politique-confidentialite-modal').addEventListener('click', e => {
+    if (e.target === document.getElementById('politique-confidentialite-modal')) closePolitiqueConfidentialite();
   });
 
   /* ── Script loader (blocage avant consentement) ── */
