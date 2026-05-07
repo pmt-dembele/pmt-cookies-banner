@@ -568,7 +568,7 @@ const html = `
 
 <!-- POLITIQUE DE CONFIDENTIALITE MODAL -->
 <div id="politique-confidentialite-modal" role="dialog" aria-label="Politique de confidentialité">
-  <div class="ck-pol-box">
+  <div class="politique-box">
     <h2>Politique de confidentialité de PAYMETRUST</h2>
     <h3>Présentation</h3>
     <p>
