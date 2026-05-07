@@ -297,7 +297,24 @@ const css = `
     }
     #politique-modal.open { display: flex; animation: fadeIn 0.25s ease; }
 
-    .politique-box {
+    #politique-confidentialite-modal {
+        display: none;
+        position: fixed;
+        inset: 0;
+        z-index: 10002;
+        background: rgba(0,0,0,0.5);
+        backdrop-filter: blur(4px);
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+    }
+    #politique-confidentialite-modal.open {
+        display: flex;
+        animation: fadeIn 0.25s ease;
+    }
+
+    .politique-box,
+    .ck-pol-box {
         background: var(--white);
         border-radius: var(--radius);
         width: 100%;
